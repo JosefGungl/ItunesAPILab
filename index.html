@@ -7,25 +7,37 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<div class="row container-fluid align-items-center" style="width: 550px;">
-    <form>
-        <div class="col justify-content-center">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="Search">
-                <button class="btn btn-outline-secondary" type="submit" id="search-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+<form>
+    <div class="text-center">
+        <h1>Music Search</h1>
+    </div>
+    <div class="container text-center pt-3">
+        <div class="row justify-content-center row-cols-auto">
+            <div class="col">
+                <div class="input-group mb-3">
+                    <div class="form-floating" style="width: 200px;">
+                        <input type="text" id="artist" class="form-control">
+                        <label for="artist">Artist Search</label>
+                    </div>
+                    <div class="form-floating" style="width: 100px;">
+                        <input type="number" class="form-control" id="limit" min="0" max="50">
+                        <label for="limit"># of Results</label>
+                    </div>
+                    <button class="btn btn-outline-secondary" type="button" id="searchMusic">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
             </div>
         </div>
+    </div>
+</form>
 
-    </form>
-</div>
-
-<div id="results"></div>
+<div id="display"></div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 <script src="ajax.js"></script>
 <script src="https://kit.fontawesome.com/35954a5375.js" crossorigin="anonymous"></script>
 </body>
